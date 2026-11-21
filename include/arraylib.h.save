@@ -1,0 +1,50 @@
+#ifndef ARRAYLIB_H
+#define ARRAYLIB_H
+
+#include <cstddef>
+
+#if defined(_WIN32)
+  #if defined(ARRAYLIB_BUILD)
+    #define ARRAYLIB_API __declspec(dllexport)
+  #else
+    #define ARRAYLIB_API __declspec(dllimport)
+  #endif
+#else
+  #define ARRAYLIB_API
+#endif
+
+ARRAYLIB_API int sum(const int* a, std::size_t n);
+ARRAYLIB_API int max(const int* a, std::size_t n);
+ARRAYLIB_API int min(const int* a, std::size_t n);
+ARRAYLIB_API double average(const int* a, std::size_t n);
+ARRAYLIB_API int count_positive(const int* a, std::size_t n);
+ARRAYLIB_API int count_negative(const int* a, std::size_t n);
+ARRAYLIB_API int count_zero(const int* a, std::size_t n);
+ARRAYLIB_API int product(const int* a, std::size_t n);
+ARRAYLIB_API double median(const int* a, std::size_t n);
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
